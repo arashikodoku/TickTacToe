@@ -6,9 +6,13 @@ import android.widget.Button;
 public class ButtonOnClick implements View.OnClickListener {
     private static boolean isOMove = true;
     private Button button;
-    public ButtonOnClick(Button button) {
+    private Board board;
+
+    public ButtonOnClick(Button button, Board board) {
         this.button = button;
+        this.board = board;
     }
+
     @Override
     public void onClick(View view) {
         if (button.getText().length() == 0) {
@@ -18,8 +22,21 @@ public class ButtonOnClick implements View.OnClickListener {
                 button.setText("X");
             }
             isOMove = !isOMove;
+
+            if (board.checkForVictory(isOMove)) {
+                // TODO game over
+                if(isOMove) {
+                    if (but)
+//                    board.setText("win");
+
+                }
+
+            } else {
+
+
+                // TODO game goes on
+            }
         }
     }
 }
-
 

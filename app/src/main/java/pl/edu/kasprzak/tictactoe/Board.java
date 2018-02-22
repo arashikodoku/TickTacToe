@@ -9,9 +9,22 @@ public class Board {
         this.activity = activity;
         buttons = new Button[3][3];
     }
+
     public void setButton(Button button, int x, int y) {
         buttons[x][y] = button;
-        button.setOnClickListener(new ButtonOnClick(button));
+        button.setOnClickListener(new ButtonOnClick(button, this));
+    }
+
+    public boolean checkForVictory(boolean isOMove) {
+        if (isOMove) { // TODO check for O victory
+
+        } else { // TODO check for X victory
+
+        }
+     return true;}
+
+    public Button[][] getButtons() {
+        return buttons;
     }
 }
 

@@ -23,5 +23,9 @@ public class MainActivity extends AppCompatActivity {
         board.setButton((Button)findViewById(R.id.b21), 2, 1);
         board.setButton((Button)findViewById(R.id.b22), 2, 2);
     }
+
+    public Board getBoard() {
+        return board;
+    }
 }
 
